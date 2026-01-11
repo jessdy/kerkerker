@@ -594,7 +594,7 @@ export function VodSourcesTab({
         <div className="flex gap-3 mt-6">
           <button
             onClick={handleSave}
-            className="px-6 py-2 bg-[#E50914] hover:bg-[#B20710] text-white rounded-lg transition font-medium"
+            className="px-6 py-2 bg-[#FF9900] hover:bg-[#FF8800] text-white rounded-lg transition font-medium"
           >
             保存
           </button>
@@ -613,7 +613,7 @@ export function VodSourcesTab({
           <div className="flex items-center gap-3">
             <h2 className="text-xl font-bold text-white">已配置的视频源</h2>
             {sources.length > 0 && (
-              <span className="px-2 py-1 bg-[#E50914] text-white text-xs font-medium rounded-full">
+              <span className="px-2 py-1 bg-[#FF9900] text-white text-xs font-medium rounded-full">
                 {sources.length} 个
               </span>
             )}
@@ -621,7 +621,7 @@ export function VodSourcesTab({
           <div className="flex gap-2">
             <button
               onClick={() => setShowEncryptedImportModal(true)}
-              className="px-4 py-2 bg-[#E50914] hover:bg-[#B20710] text-white rounded-lg transition font-medium text-sm flex items-center gap-2"
+              className="px-4 py-2 bg-[#FF9900] hover:bg-[#FF8800] text-white rounded-lg transition font-medium text-sm flex items-center gap-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -643,7 +643,7 @@ export function VodSourcesTab({
             {sources.length > 0 && (
               <button
                 onClick={handleDeleteAll}
-                className="px-4 py-2 bg-[#333] hover:bg-red-600 text-slate-300 hover:text-white rounded-lg transition font-medium text-sm flex items-center gap-2"
+                className="px-4 py-2 bg-[#333] hover:bg-orange-600 text-slate-300 hover:text-white rounded-lg transition font-medium text-sm flex items-center gap-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -670,7 +670,7 @@ export function VodSourcesTab({
               key={source.key}
               className={`p-4 rounded-lg border transition ${
                 selectedKey === source.key
-                  ? "bg-[#E50914]/10 border-[#E50914]"
+                  ? "bg-[#FF9900]/10 border-[#FF9900]"
                   : "bg-[#141414] border-[#333] hover:border-[#555]"
               }`}
             >
@@ -687,7 +687,7 @@ export function VodSourcesTab({
                       {source.key}
                     </span>
                     {selectedKey === source.key && (
-                      <span className="text-xs px-2 py-1 bg-[#E50914] text-white rounded">
+                      <span className="text-xs px-2 py-1 bg-[#FF9900] text-white rounded">
                         当前使用
                       </span>
                     )}
@@ -718,13 +718,13 @@ export function VodSourcesTab({
                   )}
                   <button
                     onClick={() => handleEdit(source)}
-                    className="px-3 py-1 bg-[#E50914] hover:bg-[#B20710] text-white text-sm rounded transition"
+                    className="px-3 py-1 bg-[#FF9900] hover:bg-[#FF8800] text-white text-sm rounded transition"
                   >
                     编辑
                   </button>
                   <button
                     onClick={() => handleDelete(source.key)}
-                    className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-sm rounded transition"
+                    className="px-3 py-1 bg-orange-600 hover:bg-orange-700 text-white text-sm rounded transition"
                   >
                     删除
                   </button>
@@ -752,7 +752,7 @@ export function VodSourcesTab({
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-2">
-              解密密码 <span className="text-red-400">*</span>
+              解密密码 <span className="text-orange-400">*</span>
             </label>
             <input
               type="password"
@@ -765,7 +765,7 @@ export function VodSourcesTab({
 
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-2">
-              加密数据 / 订阅URL <span className="text-red-400">*</span>
+              加密数据 / 订阅URL <span className="text-orange-400">*</span>
             </label>
             <textarea
               value={importData}
@@ -780,7 +780,7 @@ export function VodSourcesTab({
           </div>
 
           {decryptError && (
-            <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
+            <div className="p-3 bg-orange-500/10 border border-orange-500/30 rounded-lg text-orange-400 text-sm">
               ❌ {decryptError}
             </div>
           )}
@@ -788,7 +788,7 @@ export function VodSourcesTab({
           <button
             onClick={handleDecryptPreview}
             disabled={isDecrypting || !importPassword || !importData}
-            className="w-full px-4 py-2 bg-[#E50914] hover:bg-[#B20710] disabled:bg-[#333] disabled:cursor-not-allowed text-white rounded-lg transition font-medium"
+            className="w-full px-4 py-2 bg-[#FF9900] hover:bg-[#FF8800] disabled:bg-[#333] disabled:cursor-not-allowed text-white rounded-lg transition font-medium"
           >
             {isDecrypting ? "解密中..." : "🔓 解密预览"}
           </button>
@@ -807,7 +807,7 @@ export function VodSourcesTab({
                   unifiedPreview.vodSources.length > 0 && (
                     <div className="space-y-2">
                       <div className="flex items-center gap-2">
-                        <span className="text-[#E50914]">📺</span>
+                        <span className="text-[#FF9900]">📺</span>
                         <span className="text-white font-medium">
                           视频源 ({unifiedPreview.vodSources.length} 个)
                         </span>
@@ -837,7 +837,7 @@ export function VodSourcesTab({
                   unifiedPreview.shortsSources.length > 0 && (
                     <div className="space-y-2">
                       <div className="flex items-center gap-2">
-                        <span className="text-[#E50914]">🎬</span>
+                        <span className="text-[#FF9900]">🎬</span>
                         <span className="text-white font-medium">
                           短剧源 ({unifiedPreview.shortsSources.length} 个)
                         </span>
@@ -868,7 +868,7 @@ export function VodSourcesTab({
                   unifiedPreview.dailymotionChannels.length > 0 && (
                     <div className="space-y-2">
                       <div className="flex items-center gap-2">
-                        <span className="text-[#E50914]">📹</span>
+                        <span className="text-[#FF9900]">📹</span>
                         <span className="text-white font-medium">
                           Dailymotion 频道 (
                           {unifiedPreview.dailymotionChannels.length} 个)
@@ -906,7 +906,7 @@ export function VodSourcesTab({
                     onClick={() => setImportMode("merge")}
                     className={`flex-1 px-3 py-2 rounded-lg text-sm transition ${
                       importMode === "merge"
-                        ? "bg-[#E50914] text-white"
+                        ? "bg-[#FF9900] text-white"
                         : "bg-[#333] text-slate-300 hover:bg-[#444]"
                     }`}
                   >

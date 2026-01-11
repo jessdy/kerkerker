@@ -146,7 +146,7 @@ export function PlayerSettingsPanel({
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-semibold text-white flex items-center space-x-2">
                 <svg
-                  className="w-4 h-4 text-red-500"
+                  className="w-4 h-4 text-orange-500"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -182,7 +182,7 @@ export function PlayerSettingsPanel({
                   onClick={() => handleModeChange("iframe")}
                   className={`w-full text-left px-4 py-3 rounded-lg transition-all group ${
                     currentMode === "iframe"
-                      ? "bg-red-600 text-white ring-2 ring-red-400 shadow-lg shadow-red-500/20"
+                      ? "bg-orange-600 text-white ring-2 ring-orange-400 shadow-lg shadow-orange-500/20"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-800 hover:scale-[1.02]"
                   }`}
                 >
@@ -206,7 +206,7 @@ export function PlayerSettingsPanel({
                         <div
                           className={`text-xs mt-1 ${
                             currentMode === "iframe"
-                              ? "text-red-100"
+                              ? "text-orange-100"
                               : "text-gray-500"
                           }`}
                         >
@@ -228,7 +228,7 @@ export function PlayerSettingsPanel({
                   disabled={!playerConfig.enableProxy}
                   className={`w-full text-left px-4 py-3 rounded-lg transition-all group ${
                     currentMode === "local"
-                      ? "bg-red-600 text-white ring-2 ring-red-400 shadow-lg shadow-red-500/20"
+                      ? "bg-orange-600 text-white ring-2 ring-orange-400 shadow-lg shadow-orange-500/20"
                       : playerConfig.enableProxy
                       ? "bg-gray-800/50 text-gray-300 hover:bg-gray-800 hover:scale-[1.02]"
                       : "bg-gray-900/50 text-gray-600 cursor-not-allowed opacity-60"
@@ -260,7 +260,7 @@ export function PlayerSettingsPanel({
                         <div
                           className={`text-xs mt-1 ${
                             currentMode === "local"
-                              ? "text-red-100"
+                              ? "text-orange-100"
                               : playerConfig.enableProxy
                               ? "text-gray-500"
                               : "text-gray-600"
@@ -425,7 +425,7 @@ export function PlayerSettingsPanel({
                         onClick={() => onIframePlayerChange(index)}
                         className={`w-full text-left px-4 py-2.5 rounded-lg transition-all ${
                           currentIframePlayerIndex === index
-                            ? "bg-red-600 text-white font-medium shadow-md"
+                            ? "bg-orange-600 text-white font-medium shadow-md"
                             : "bg-gray-800/50 text-gray-300 hover:bg-gray-800"
                         }`}
                       >
@@ -434,7 +434,7 @@ export function PlayerSettingsPanel({
                             <span
                               className={`text-xs px-1.5 py-0.5 rounded ${
                                 currentIframePlayerIndex === index
-                                  ? "bg-red-700 text-white"
+                                  ? "bg-orange-700 text-white"
                                   : "bg-gray-700 text-gray-400"
                               }`}
                             >

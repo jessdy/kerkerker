@@ -133,7 +133,7 @@ export function ShortDramaOverlay({
               {showSourceSelector && (
                 <div className="absolute top-full right-0 mt-2 py-1 bg-zinc-900/95 backdrop-blur-sm rounded-lg shadow-2xl border border-zinc-800 min-w-[100px] overflow-hidden z-[70]">
                   {/* Netflix风格红色顶部线 */}
-                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-red-600" />
+                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-orange-600" />
                   {sources.map((source) => (
                     <button
                       key={source.key}
@@ -144,7 +144,7 @@ export function ShortDramaOverlay({
                       }}
                       className={`w-full px-3 py-2 text-left text-xs transition-colors ${
                         source.key === currentSource
-                          ? "text-red-500 bg-red-500/10"
+                          ? "text-orange-500 bg-orange-500/10"
                           : "text-white/80 hover:text-white hover:bg-white/10"
                       }`}
                     >

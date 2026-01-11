@@ -189,7 +189,7 @@ export function PlayerConfigTab({
               onClick={() => handlePlayerModeChange("iframe")}
               className={`p-4 rounded-lg border-2 transition ${
                 playerConfig.mode === "iframe"
-                  ? "border-[#E50914] bg-[#E50914]/10"
+                  ? "border-[#FF9900] bg-[#FF9900]/10"
                   : "border-[#333] bg-[#141414] hover:border-[#555]"
               }`}
             >
@@ -202,7 +202,7 @@ export function PlayerConfigTab({
               onClick={() => handlePlayerModeChange("local")}
               className={`p-4 rounded-lg border-2 transition ${
                 playerConfig.mode === "local"
-                  ? "border-[#E50914] bg-[#E50914]/10"
+                  ? "border-[#FF9900] bg-[#FF9900]/10"
                   : "border-[#333] bg-[#141414] hover:border-[#555]"
               }`}
             >
@@ -213,7 +213,7 @@ export function PlayerConfigTab({
               onClick={() => handlePlayerModeChange("auto")}
               className={`p-4 rounded-lg border-2 transition ${
                 playerConfig.mode === "auto"
-                  ? "border-[#E50914] bg-[#E50914]/10"
+                  ? "border-[#FF9900] bg-[#FF9900]/10"
                   : "border-[#333] bg-[#141414] hover:border-[#555]"
               }`}
             >
@@ -234,7 +234,7 @@ export function PlayerConfigTab({
           <button
             onClick={() => handleToggleProxy(!playerConfig.enableProxy)}
             className={`relative inline-flex h-8 w-14 items-center rounded-full transition-colors ${
-              playerConfig.enableProxy ? "bg-[#E50914]" : "bg-[#333]"
+              playerConfig.enableProxy ? "bg-[#FF9900]" : "bg-[#333]"
             }`}
           >
             <span
@@ -258,7 +258,7 @@ export function PlayerConfigTab({
               </button>
               <button
                 onClick={handleAddPlayer}
-                className="px-4 py-2 bg-[#E50914] hover:bg-[#B20710] text-white text-sm rounded-lg transition"
+                className="px-4 py-2 bg-[#FF9900] hover:bg-[#FF8800] text-white text-sm rounded-lg transition"
               >
                 + 添加播放器
               </button>
@@ -303,13 +303,13 @@ export function PlayerConfigTab({
                     </button>
                     <button
                       onClick={() => handleEditPlayer(player)}
-                      className="px-3 py-1 bg-[#E50914] hover:bg-[#B20710] text-white text-xs rounded transition"
+                      className="px-3 py-1 bg-[#FF9900] hover:bg-[#FF8800] text-white text-xs rounded transition"
                     >
                       编辑
                     </button>
                     <button
                       onClick={() => handleDeletePlayer(player.id)}
-                      className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-xs rounded transition"
+                      className="px-3 py-1 bg-orange-600 hover:bg-orange-700 text-white text-xs rounded transition"
                     >
                       删除
                     </button>
@@ -338,7 +338,7 @@ export function PlayerConfigTab({
                 }
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   playerConfig.localPlayerSettings.autoSaveProgress
-                    ? "bg-[#E50914]"
+                    ? "bg-[#FF9900]"
                     : "bg-[#333]"
                 }`}
               >
@@ -365,7 +365,7 @@ export function PlayerConfigTab({
                     parseInt(e.target.value) || 5
                   )
                 }
-                className="w-full px-3 py-2 bg-slate-900/50 border border-[#333] rounded text-white focus:outline-none focus:ring-2 focus:ring-[#E50914]"
+                className="w-full px-3 py-2 bg-slate-900/50 border border-[#333] rounded text-white focus:outline-none focus:ring-2 focus:ring-[#FF9900]"
                 min="1"
                 max="60"
               />

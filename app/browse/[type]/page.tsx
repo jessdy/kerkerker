@@ -47,8 +47,8 @@ const PAGE_CONFIG: Record<string, PageConfig> = {
     title: "电影",
     emoji: "🎬",
     api: "movies",
-    gradient: "from-red-500/5 via-transparent to-purple-500/5",
-    bgColor1: "bg-red-500/10",
+    gradient: "from-orange-500/5 via-transparent to-purple-500/5",
+    bgColor1: "bg-orange-500/10",
     bgColor2: "bg-purple-500/10",
     hasFilters: false,
     hasCategories: true,
@@ -168,14 +168,14 @@ const SORT_OPTIONS = ["热门", "时间", "评分"];
 const CATEGORY_ICONS: Record<string, React.JSX.Element> = {
   热门电影: <Flame className="w-5 h-5 text-orange-500" />,
   豆瓣高分: <Star className="w-5 h-5 text-yellow-500 fill-current" />,
-  动作片: <Zap className="w-5 h-5 text-red-500" />,
+  动作片: <Zap className="w-5 h-5 text-orange-500" />,
   喜剧片: <Smile className="w-5 h-5 text-yellow-400" />,
   科幻片: <Rocket className="w-5 h-5 text-blue-500" />,
   惊悚片: <Ghost className="w-5 h-5 text-purple-500" />,
   爱情片: <Heart className="w-5 h-5 text-pink-500 fill-current" />,
   动画电影: <Palette className="w-5 h-5 text-green-500" />,
   热门剧集: <Flame className="w-5 h-5 text-orange-500" />,
-  国产剧: <Drama className="w-5 h-5 text-red-500" />,
+  国产剧: <Drama className="w-5 h-5 text-orange-500" />,
   美剧: <Globe className="w-5 h-5 text-blue-500" />,
   日剧: <Tv className="w-5 h-5 text-pink-500" />,
   韩剧: <Tv className="w-5 h-5 text-purple-500" />,
@@ -475,8 +475,8 @@ export default function BrowsePage() {
               </div>
               <span className="text-sm md:text-base font-medium">返回</span>
             </button>
-            <h1 className="text-2xl md:text-3xl font-bold tracking-tight bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
-              壳儿
+            <h1 className="text-2xl md:text-3xl font-bold tracking-tight bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
+              {process.env.NEXT_PUBLIC_APP_NAME || "临客"}
             </h1>
           </div>
         </div>
@@ -545,17 +545,17 @@ export default function BrowsePage() {
         {loading ? (
           <div className="flex items-center justify-center py-32">
             <div className="text-center">
-              <div className="animate-spin rounded-full h-16 w-16 border-4 border-gray-700 border-t-red-600 mx-auto mb-4" />
+              <div className="animate-spin rounded-full h-16 w-16 border-4 border-gray-700 border-t-orange-600 mx-auto mb-4" />
               <p className="text-gray-400 text-lg">正在加载精彩内容...</p>
             </div>
           </div>
         ) : error ? (
           <div className="flex items-center justify-center py-32">
             <div className="text-center">
-              <p className="text-red-500 mb-4">{error}</p>
+              <p className="text-orange-500 mb-4">{error}</p>
               <button
                 onClick={() => fetchData(1, false)}
-                className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors shadow-lg shadow-red-600/20 flex items-center gap-2 mx-auto"
+                className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium transition-colors shadow-lg shadow-orange-600/20 flex items-center gap-2 mx-auto"
               >
                 <RefreshCw className="w-4 h-4" />
                 重新加载
@@ -610,7 +610,7 @@ export default function BrowsePage() {
                 onClick={() =>
                   setFilters({ genre: "", year: "", region: "", sort: "" })
                 }
-                className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors"
+                className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium transition-colors"
               >
                 重置筛选条件
               </button>
@@ -638,7 +638,7 @@ export default function BrowsePage() {
               <div className="flex justify-center mt-8">
                 {loadingMore ? (
                   <div className="flex items-center gap-2 text-gray-400">
-                    <div className="animate-spin rounded-full h-5 w-5 border-2 border-gray-600 border-t-red-500" />
+                    <div className="animate-spin rounded-full h-5 w-5 border-2 border-gray-600 border-t-orange-500" />
                     <span>加载中...</span>
                   </div>
                 ) : hasMore ? (

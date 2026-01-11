@@ -228,7 +228,7 @@ export function DatabaseSettingsTab({ onShowToast }: DatabaseSettingsTabProps) {
             <button
               onClick={handleTestConnection}
               disabled={testing}
-              className="px-4 py-2 bg-[#E50914] hover:bg-[#B20710] text-white text-sm rounded-lg transition flex items-center gap-2 disabled:opacity-50"
+              className="px-4 py-2 bg-[#FF9900] hover:bg-[#FF8800] text-white text-sm rounded-lg transition flex items-center gap-2 disabled:opacity-50"
             >
               {testing ? (
                 <>
@@ -247,7 +247,7 @@ export function DatabaseSettingsTab({ onShowToast }: DatabaseSettingsTabProps) {
 
         {loading && !status ? (
           <div className="flex items-center justify-center py-12">
-            <RefreshCw size={32} className="animate-spin text-[#E50914]" />
+            <RefreshCw size={32} className="animate-spin text-[#FF9900]" />
           </div>
         ) : status ? (
           <div className="space-y-4">
@@ -255,20 +255,20 @@ export function DatabaseSettingsTab({ onShowToast }: DatabaseSettingsTabProps) {
             <div className={`p-4 rounded-lg border ${
               status.connected 
                 ? "bg-green-900/20 border-green-600/50" 
-                : "bg-red-900/20 border-red-600/50"
+                : "bg-orange-900/20 border-orange-600/50"
             }`}>
               <div className="flex items-center gap-3">
                 {status.connected ? (
                   <CheckCircle2 size={24} className="text-green-500" />
                 ) : (
-                  <XCircle size={24} className="text-red-500" />
+                  <XCircle size={24} className="text-orange-500" />
                 )}
                 <div className="flex-1">
-                  <div className={`font-medium ${status.connected ? "text-green-400" : "text-red-400"}`}>
+                  <div className={`font-medium ${status.connected ? "text-green-400" : "text-orange-400"}`}>
                     {status.connected ? "连接正常" : "连接失败"}
                   </div>
                   {status.error && (
-                    <div className="text-sm text-red-400 mt-1 font-mono break-all">{status.error}</div>
+                    <div className="text-sm text-orange-400 mt-1 font-mono break-all">{status.error}</div>
                   )}
                 </div>
               </div>
@@ -471,27 +471,27 @@ export function DatabaseSettingsTab({ onShowToast }: DatabaseSettingsTabProps) {
             <h4 className="text-white font-medium mb-3">MongoDB Atlas 快速配置</h4>
             <ol className="space-y-2 text-slate-400">
               <li className="flex gap-2">
-                <span className="text-[#E50914] font-bold">1.</span>
+                <span className="text-[#FF9900] font-bold">1.</span>
                 <span>访问 <a href="https://www.mongodb.com/atlas" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">mongodb.com/atlas</a> 注册账号</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-[#E50914] font-bold">2.</span>
+                <span className="text-[#FF9900] font-bold">2.</span>
                 <span>创建免费 M0 集群（选择离用户最近的区域）</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-[#E50914] font-bold">3.</span>
+                <span className="text-[#FF9900] font-bold">3.</span>
                 <span>在 Database Access 创建数据库用户</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-[#E50914] font-bold">4.</span>
+                <span className="text-[#FF9900] font-bold">4.</span>
                 <span>在 Network Access 添加 IP 白名单（或设置 0.0.0.0/0 允许所有）</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-[#E50914] font-bold">5.</span>
+                <span className="text-[#FF9900] font-bold">5.</span>
                 <span>点击 Connect → Drivers → 复制连接字符串</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-[#E50914] font-bold">6.</span>
+                <span className="text-[#FF9900] font-bold">6.</span>
                 <span>替换 &lt;password&gt; 为你的密码，设置到 MONGODB_URI</span>
               </li>
             </ol>

@@ -113,7 +113,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   </div>
                   <button
                     onClick={clearHistory}
-                    className="flex items-center gap-1 text-xs text-gray-500 hover:text-red-400 transition-colors"
+                    className="flex items-center gap-1 text-xs text-gray-500 hover:text-orange-400 transition-colors"
                   >
                     <Trash2 className="w-3.5 h-3.5" />
                     <span>清除全部</span>
@@ -131,7 +131,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                       </span>
                       <button
                         onClick={(e) => handleRemoveHistory(e, keyword)}
-                        className="p-0.5 opacity-0 group-hover:opacity-100 hover:text-red-400 transition-all duration-200"
+                        className="p-0.5 opacity-0 group-hover:opacity-100 hover:text-orange-400 transition-all duration-200"
                         title="删除"
                       >
                         <X className="w-3 h-3" />

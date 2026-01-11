@@ -50,13 +50,13 @@ export function VideoPlayerModal({
             />
           ) : (
             <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-neutral-950 gap-4">
-              <AlertCircle size={56} className="text-red-400" />
+              <AlertCircle size={56} className="text-orange-400" />
               <p className="text-white text-xl font-medium">视频加载失败</p>
               <a
                 href={`https://www.dailymotion.com/video/${video.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors font-medium"
+                className="px-5 py-2.5 bg-orange-600 hover:bg-orange-700 text-white rounded-lg transition-colors font-medium"
               >
                 在 Dailymotion 上观看
               </a>

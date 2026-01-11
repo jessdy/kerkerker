@@ -7,9 +7,9 @@ export function ErrorState({ error, onRetry }: ErrorStateProps) {
   return (
     <div className="h-screen flex items-center justify-center">
       <div className="text-center px-4 max-w-md">
-        <div className="w-24 h-24 mx-auto mb-6 bg-red-900/20 rounded-full flex items-center justify-center">
+        <div className="w-24 h-24 mx-auto mb-6 bg-orange-900/20 rounded-full flex items-center justify-center">
           <svg
-            className="w-12 h-12 text-red-500"
+            className="w-12 h-12 text-orange-500"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -28,7 +28,7 @@ export function ErrorState({ error, onRetry }: ErrorStateProps) {
         <p className="text-gray-400 mb-6 text-sm">{error}</p>
         <button
           onClick={onRetry}
-          className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors shadow-lg"
+          className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium transition-colors shadow-lg"
         >
           重试
         </button>

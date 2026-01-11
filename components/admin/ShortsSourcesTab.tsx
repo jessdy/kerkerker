@@ -323,7 +323,7 @@ export function ShortsSourcesTab({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-2">
-              Key (唯一标识) <span className="text-red-400">*</span>
+              Key (唯一标识) <span className="text-orange-400">*</span>
             </label>
             <input
               type="text"
@@ -338,7 +338,7 @@ export function ShortsSourcesTab({
           </div>
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-2">
-              名称 <span className="text-red-400">*</span>
+              名称 <span className="text-orange-400">*</span>
             </label>
             <input
               type="text"
@@ -352,7 +352,7 @@ export function ShortsSourcesTab({
           </div>
           <div className="md:col-span-2">
             <label className="block text-sm font-medium text-slate-300 mb-2">
-              API 地址 <span className="text-red-400">*</span>
+              API 地址 <span className="text-orange-400">*</span>
             </label>
             <input
               type="text"
@@ -409,7 +409,7 @@ export function ShortsSourcesTab({
         <div className="flex gap-3 mt-6">
           <button
             onClick={handleSave}
-            className="px-6 py-2 bg-[#E50914] hover:bg-[#B20710] text-white rounded-lg transition font-medium"
+            className="px-6 py-2 bg-[#FF9900] hover:bg-[#FF8800] text-white rounded-lg transition font-medium"
           >
             保存
           </button>
@@ -428,7 +428,7 @@ export function ShortsSourcesTab({
           <div className="flex items-center gap-3">
             <h2 className="text-xl font-bold text-white">已配置的短剧源</h2>
             {sources.length > 0 && (
-              <span className="px-2 py-1 bg-[#E50914] text-white text-xs font-medium rounded-full">
+              <span className="px-2 py-1 bg-[#FF9900] text-white text-xs font-medium rounded-full">
                 {sources.length} 个
               </span>
             )}
@@ -436,7 +436,7 @@ export function ShortsSourcesTab({
           <div className="flex gap-2">
             <button
               onClick={() => setShowEncryptedImportModal(true)}
-              className="px-4 py-2 bg-[#E50914] hover:bg-[#B20710] text-white rounded-lg transition font-medium text-sm flex items-center gap-2"
+              className="px-4 py-2 bg-[#FF9900] hover:bg-[#FF8800] text-white rounded-lg transition font-medium text-sm flex items-center gap-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -458,7 +458,7 @@ export function ShortsSourcesTab({
             {sources.length > 0 && (
               <button
                 onClick={handleDeleteAll}
-                className="px-4 py-2 bg-[#333] hover:bg-red-600 text-slate-300 hover:text-white rounded-lg transition font-medium text-sm flex items-center gap-2"
+                className="px-4 py-2 bg-[#333] hover:bg-orange-600 text-slate-300 hover:text-white rounded-lg transition font-medium text-sm flex items-center gap-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -485,7 +485,7 @@ export function ShortsSourcesTab({
               key={source.key}
               className={`p-4 rounded-lg border transition ${
                 selectedKey === source.key
-                  ? "bg-[#E50914]/10 border-[#E50914]"
+                  ? "bg-[#FF9900]/10 border-[#FF9900]"
                   : "bg-[#141414] border-[#333] hover:border-[#555]"
               }`}
             >
@@ -502,7 +502,7 @@ export function ShortsSourcesTab({
                       {source.key}
                     </span>
                     {selectedKey === source.key && (
-                      <span className="text-xs px-2 py-1 bg-[#E50914] text-white rounded">
+                      <span className="text-xs px-2 py-1 bg-[#FF9900] text-white rounded">
                         默认
                       </span>
                     )}
@@ -525,13 +525,13 @@ export function ShortsSourcesTab({
                   )}
                   <button
                     onClick={() => handleEdit(source)}
-                    className="px-3 py-1 bg-[#E50914] hover:bg-[#B20710] text-white text-sm rounded transition"
+                    className="px-3 py-1 bg-[#FF9900] hover:bg-[#FF8800] text-white text-sm rounded transition"
                   >
                     编辑
                   </button>
                   <button
                     onClick={() => handleDelete(source.key)}
-                    className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-sm rounded transition"
+                    className="px-3 py-1 bg-orange-600 hover:bg-orange-700 text-white text-sm rounded transition"
                   >
                     删除
                   </button>
@@ -559,7 +559,7 @@ export function ShortsSourcesTab({
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-2">
-              解密密码 <span className="text-red-400">*</span>
+              解密密码 <span className="text-orange-400">*</span>
             </label>
             <input
               type="password"
@@ -572,7 +572,7 @@ export function ShortsSourcesTab({
 
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-2">
-              加密数据 / 订阅URL <span className="text-red-400">*</span>
+              加密数据 / 订阅URL <span className="text-orange-400">*</span>
             </label>
             <textarea
               value={importData}
@@ -587,7 +587,7 @@ export function ShortsSourcesTab({
           </div>
 
           {decryptError && (
-            <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
+            <div className="p-3 bg-orange-500/10 border border-orange-500/30 rounded-lg text-orange-400 text-sm">
               ❌ {decryptError}
             </div>
           )}
@@ -595,7 +595,7 @@ export function ShortsSourcesTab({
           <button
             onClick={handleDecryptPreview}
             disabled={isDecrypting || !importPassword || !importData}
-            className="w-full px-4 py-2 bg-[#E50914] hover:bg-[#B20710] disabled:bg-[#333] disabled:cursor-not-allowed text-white rounded-lg transition font-medium"
+            className="w-full px-4 py-2 bg-[#FF9900] hover:bg-[#FF8800] disabled:bg-[#333] disabled:cursor-not-allowed text-white rounded-lg transition font-medium"
           >
             {isDecrypting ? "解密中..." : "🔓 解密预览"}
           </button>

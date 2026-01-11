@@ -250,7 +250,7 @@ export function UnifiedPlayer({
     return (
       <div className="relative w-full h-full bg-black flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-gray-700 border-t-red-600 mx-auto mb-4" />
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-gray-700 border-t-orange-600 mx-auto mb-4" />
           <p className="text-white text-lg">加载播放器配置...</p>
         </div>
       </div>

@@ -32,7 +32,7 @@ export function WatchHistory() {
       {/* 标题和清除全部 - 与 CategoryRow 保持一致 */}
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl md:text-2xl font-bold text-white flex items-center gap-3">
-          <History className="w-6 h-6 text-red-500" />
+          <History className="w-6 h-6 text-orange-500" />
           <span>继续观看</span>
         </h2>
         <button
@@ -53,7 +53,7 @@ export function WatchHistory() {
               onClick={() => handleClick(item)}
               className="shrink-0 w-40 sm:w-48 md:w-56 cursor-pointer group/card"
             >
-              <div className="relative aspect-[2/3] rounded-lg overflow-hidden bg-gray-800 shadow-lg transition-all duration-300 group-hover/card:shadow-xl group-hover/card:shadow-red-500/20 group-hover/card:scale-105">
+              <div className="relative aspect-[2/3] rounded-lg overflow-hidden bg-gray-800 shadow-lg transition-all duration-300 group-hover/card:shadow-xl group-hover/card:shadow-orange-500/20 group-hover/card:scale-105">
                 {/* 封面图 - 添加 referrerPolicy 绕过防盗链 */}
                 {item.cover && (
                   <img
@@ -101,7 +101,7 @@ export function WatchHistory() {
                 {/* 删除按钮 */}
                 <button
                   onClick={(e) => handleRemove(e, item.id)}
-                  className="absolute top-2 right-2 p-1.5 bg-black/60 hover:bg-red-600 rounded-full opacity-0 group-hover/card:opacity-100 transition-all duration-200"
+                  className="absolute top-2 right-2 p-1.5 bg-black/60 hover:bg-orange-600 rounded-full opacity-0 group-hover/card:opacity-100 transition-all duration-200"
                   title="移除"
                 >
                   <X className="w-3.5 h-3.5 text-white" />
@@ -109,7 +109,7 @@ export function WatchHistory() {
 
                 {/* 继续播放按钮 */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-200">
-                  <div className="w-14 h-14 rounded-full bg-red-600/90 flex items-center justify-center shadow-lg shadow-red-500/50">
+                  <div className="w-14 h-14 rounded-full bg-orange-600/90 flex items-center justify-center shadow-lg shadow-orange-500/50">
                     <ChevronRight className="w-8 h-8 text-white ml-1" />
                   </div>
                 </div>

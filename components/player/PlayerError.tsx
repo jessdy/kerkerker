@@ -29,9 +29,9 @@ export function PlayerErrorDisplay({
   return (
     <div className="absolute inset-0 flex items-center justify-center bg-black/95 z-50">
       <div className="text-center px-6 max-w-md">
-        <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div className="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
           <svg
-            className="w-10 h-10 text-red-400"
+            className="w-10 h-10 text-orange-400"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -55,7 +55,7 @@ export function PlayerErrorDisplay({
           {error.canRetry && (
             <button
               onClick={onRetry}
-              className="px-6 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors font-medium"
+              className="px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg transition-colors font-medium"
             >
               重新加载
             </button>

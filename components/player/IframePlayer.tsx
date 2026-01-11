@@ -271,7 +271,7 @@ export function IframePlayer({
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-black/90 z-20">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-16 w-16 border-4 border-gray-700 border-t-red-600 mx-auto mb-4" />
+            <div className="animate-spin rounded-full h-16 w-16 border-4 border-gray-700 border-t-orange-600 mx-auto mb-4" />
             <p className="text-white text-lg mb-2">
               {disableParseUrl ? '正在加载视频...' : `正在加载 ${currentPlayer?.name}...`}
             </p>
@@ -304,8 +304,8 @@ export function IframePlayer({
       {playerError && (
         <div className="absolute inset-0 flex items-center justify-center bg-black/95 z-20">
           <div className="text-center px-6 max-w-md">
-            <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-10 h-10 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-10 h-10 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
@@ -326,7 +326,7 @@ export function IframePlayer({
             <div className="space-y-3">
               <button
                 onClick={retry}
-                className="w-full px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors font-medium"
+                className="w-full px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg transition-colors font-medium"
               >
                 重新尝试
               </button>

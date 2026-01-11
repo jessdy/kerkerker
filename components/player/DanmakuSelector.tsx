@@ -197,7 +197,7 @@ export function DanmakuSelector({
           <div className="p-3 border-b border-gray-800 bg-gradient-to-r from-gray-800/50 to-transparent">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-semibold text-white flex items-center space-x-2">
-                <DanmakuIcon className="w-4 h-4 text-red-500" />
+                <DanmakuIcon className="w-4 h-4 text-orange-500" />
                 <span>弹幕搜索</span>
               </h3>
               {danmakuCount > 0 && (
@@ -218,7 +218,7 @@ export function DanmakuSelector({
                   onChange={(e) => setSearchKeyword(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="输入动漫名称搜索"
-                  className="w-full px-3 py-2 pr-10 bg-white/10 border border-white/20 rounded-lg text-white text-sm placeholder:text-white/40 focus:outline-none focus:border-red-500/50"
+                  className="w-full px-3 py-2 pr-10 bg-white/10 border border-white/20 rounded-lg text-white text-sm placeholder:text-white/40 focus:outline-none focus:border-orange-500/50"
                 />
                 {isSearching && (
                   <Loader2 className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50 animate-spin" />
@@ -227,7 +227,7 @@ export function DanmakuSelector({
               <button
                 onClick={handleSearch}
                 disabled={isSearching || !searchKeyword.trim()}
-                className="px-3 py-2 bg-red-500 hover:bg-red-600 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg transition-colors"
+                className="px-3 py-2 bg-orange-500 hover:bg-orange-600 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg transition-colors"
               >
                 <Search className="w-4 h-4 text-white" />
               </button>
@@ -238,7 +238,7 @@ export function DanmakuSelector({
           <div className="max-h-[50vh] overflow-y-auto p-3 space-y-3">
             {/* 错误提示 */}
             {error && (
-              <div className="flex items-center gap-2 p-2 bg-red-500/20 border border-red-500/30 rounded-lg text-red-300 text-xs">
+              <div className="flex items-center gap-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded-lg text-orange-300 text-xs">
                 <AlertCircle className="w-4 h-4 flex-shrink-0" />
                 <span>{error}</span>
               </div>
@@ -287,7 +287,7 @@ export function DanmakuSelector({
                     onClick={() => handleSelectAnime(anime)}
                     className={`w-full flex items-center gap-2 p-2 rounded-lg transition-colors ${
                       selectedAnime?.animeId === anime.animeId
-                        ? "bg-red-500/30 border border-red-500/50"
+                        ? "bg-orange-500/30 border border-orange-500/50"
                         : "bg-white/5 hover:bg-white/10"
                     }`}
                   >
@@ -332,7 +332,7 @@ export function DanmakuSelector({
                         onClick={() => setSelectedEpisode(episode)}
                         className={`px-1.5 py-1 text-xs rounded transition-colors ${
                           selectedEpisode?.episodeId === episode.episodeId
-                            ? "bg-red-500 text-white"
+                            ? "bg-orange-500 text-white"
                             : "bg-white/10 text-white/70 hover:bg-white/20"
                         }`}
                         title={episode.episodeTitle}
@@ -350,7 +350,7 @@ export function DanmakuSelector({
               <button
                 onClick={handleLoadDanmaku}
                 disabled={isLoadingDanmaku}
-                className="w-full flex items-center justify-center gap-2 py-2 bg-red-500 hover:bg-red-600 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg transition-colors"
+                className="w-full flex items-center justify-center gap-2 py-2 bg-orange-500 hover:bg-orange-600 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg transition-colors"
               >
                 {isLoadingDanmaku ? (
                   <Loader2 className="w-4 h-4 animate-spin" />

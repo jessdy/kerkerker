@@ -24,7 +24,7 @@ export function ChannelSelector({ channels, activeChannelId, onChannelSwitch }: 
               <div
                 className={`relative rounded-full transition-all duration-200 ${
                   isActive
-                    ? 'ring-2 ring-red-600'
+                    ? 'ring-2 ring-orange-600'
                     : 'ring-1 ring-neutral-800 group-hover:ring-neutral-700'
                 }`}
               >

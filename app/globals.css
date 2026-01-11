@@ -179,14 +179,14 @@ label[for] {
 }
 
 .artplayer-plugin-danmuku .apd-send {
-  background-color: #e50914 !important;
+  background-color: #ff9900 !important;
   color: #ffffff !important;
   font-weight: bold !important;
   transition: background-color 0.2s ease;
 }
 
 .artplayer-plugin-danmuku .apd-send:hover {
-  background-color: #b20710 !important;
+  background-color: #ff8800 !important;
 }
 
 /* ========== 弹幕滚动优化 - 防止闪烁 ========== */

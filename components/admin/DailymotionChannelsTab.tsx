@@ -344,7 +344,7 @@ export function DailymotionChannelsTab({
               Dailymotion 频道管理
             </h2>
             {channels.length > 0 && (
-              <span className="px-2 py-1 bg-[#E50914] text-white text-xs font-medium rounded-full">
+              <span className="px-2 py-1 bg-[#FF9900] text-white text-xs font-medium rounded-full">
                 {channels.length} 个
               </span>
             )}
@@ -353,7 +353,7 @@ export function DailymotionChannelsTab({
             {channels.length > 0 && (
               <button
                 onClick={handleDeleteAll}
-                className="px-4 py-2 bg-[#333] hover:bg-red-600 text-white rounded-lg transition font-medium text-sm flex items-center gap-2"
+                className="px-4 py-2 bg-[#333] hover:bg-orange-600 text-white rounded-lg transition font-medium text-sm flex items-center gap-2"
               >
                 <Trash2 size={16} />
                 清空全部
@@ -361,7 +361,7 @@ export function DailymotionChannelsTab({
             )}
             <button
               onClick={() => setShowEncryptedImportModal(true)}
-              className="px-4 py-2 bg-[#E50914] hover:bg-[#B20710] text-white rounded-lg transition font-medium text-sm flex items-center gap-2"
+              className="px-4 py-2 bg-[#FF9900] hover:bg-[#FF8800] text-white rounded-lg transition font-medium text-sm flex items-center gap-2"
             >
               <Download size={16} />
               导入配置
@@ -397,7 +397,7 @@ export function DailymotionChannelsTab({
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-slate-300 mb-2">
-                      用户名 <span className="text-red-400">*</span>
+                      用户名 <span className="text-orange-400">*</span>
                     </label>
                     <input
                       type="text"
@@ -406,13 +406,13 @@ export function DailymotionChannelsTab({
                         setFormData({ ...formData, username: e.target.value })
                       }
                       placeholder="例如: kchow125"
-                      className="w-full px-4 py-2 bg-slate-900/50 border border-[#333] rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-[#E50914]"
+                      className="w-full px-4 py-2 bg-slate-900/50 border border-[#333] rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-[#FF9900]"
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-slate-300 mb-2">
-                      显示名称 <span className="text-red-400">*</span>
+                      显示名称 <span className="text-orange-400">*</span>
                     </label>
                     <input
                       type="text"
@@ -424,7 +424,7 @@ export function DailymotionChannelsTab({
                         })
                       }
                       placeholder="例如: KChow125"
-                      className="w-full px-4 py-2 bg-slate-900/50 border border-[#333] rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-[#E50914]"
+                      className="w-full px-4 py-2 bg-slate-900/50 border border-[#333] rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-[#FF9900]"
                     />
                   </div>
 
@@ -439,7 +439,7 @@ export function DailymotionChannelsTab({
                         setFormData({ ...formData, avatarUrl: e.target.value })
                       }
                       placeholder="https://..."
-                      className="w-full px-4 py-2 bg-slate-900/50 border border-[#333] rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-[#E50914]"
+                      className="w-full px-4 py-2 bg-slate-900/50 border border-[#333] rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-[#FF9900]"
                     />
                   </div>
                 </div>
@@ -455,7 +455,7 @@ export function DailymotionChannelsTab({
                 </button>
                 <button
                   onClick={editingId ? handleUpdate : handleAdd}
-                  className="px-6 py-2 bg-[#E50914] hover:bg-[#B20710] text-white rounded-lg transition"
+                  className="px-6 py-2 bg-[#FF9900] hover:bg-[#FF8800] text-white rounded-lg transition"
                 >
                   {editingId ? "更新" : "添加"}
                 </button>
@@ -478,7 +478,7 @@ export function DailymotionChannelsTab({
                 key={channel.id}
                 className={`p-4 rounded-lg border transition ${
                   channel.id === defaultChannelId
-                    ? "bg-[#E50914]/10 border-[#E50914]"
+                    ? "bg-[#FF9900]/10 border-[#FF9900]"
                     : "bg-[#141414] border-[#333] hover:border-[#555]"
                 }`}
               >
@@ -502,7 +502,7 @@ export function DailymotionChannelsTab({
                           {channel.displayName}
                         </h3>
                         {channel.id === defaultChannelId && (
-                          <span className="text-xs px-2 py-1 bg-[#E50914] text-white rounded">
+                          <span className="text-xs px-2 py-1 bg-[#FF9900] text-white rounded">
                             默认
                           </span>
                         )}
@@ -524,13 +524,13 @@ export function DailymotionChannelsTab({
                     )}
                     <button
                       onClick={() => startEdit(channel)}
-                      className="px-3 py-1 bg-[#E50914] hover:bg-[#B20710] text-white text-sm rounded transition"
+                      className="px-3 py-1 bg-[#FF9900] hover:bg-[#FF8800] text-white text-sm rounded transition"
                     >
                       编辑
                     </button>
                     <button
                       onClick={() => handleDelete(channel)}
-                      className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-sm rounded transition"
+                      className="px-3 py-1 bg-orange-600 hover:bg-orange-700 text-white text-sm rounded transition"
                     >
                       删除
                     </button>
@@ -565,32 +565,32 @@ export function DailymotionChannelsTab({
             <div className="p-6 space-y-4">
               <div>
                 <label className="block text-sm font-medium text-slate-300 mb-2">
-                  解密密码 <span className="text-red-400">*</span>
+                  解密密码 <span className="text-orange-400">*</span>
                 </label>
                 <input
                   type="password"
                   value={importPassword}
                   onChange={(e) => setImportPassword(e.target.value)}
-                  className="w-full px-4 py-2 bg-slate-900/50 border border-[#333] rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-[#E50914]"
+                  className="w-full px-4 py-2 bg-slate-900/50 border border-[#333] rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-[#FF9900]"
                   placeholder="输入加密时使用的密码"
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-slate-300 mb-2">
-                  加密数据 / 订阅URL <span className="text-red-400">*</span>
+                  加密数据 / 订阅URL <span className="text-orange-400">*</span>
                 </label>
                 <textarea
                   value={importData}
                   onChange={(e) => setImportData(e.target.value)}
                   rows={4}
-                  className="w-full px-4 py-2 bg-slate-900/50 border border-[#333] rounded-lg text-white font-mono text-sm placeholder-slate-500 focus:outline-none focus:border-[#E50914] resize-none"
+                  className="w-full px-4 py-2 bg-slate-900/50 border border-[#333] rounded-lg text-white font-mono text-sm placeholder-slate-500 focus:outline-none focus:border-[#FF9900] resize-none"
                   placeholder="粘贴加密字符串，或输入订阅 URL (https://...)"
                 />
               </div>
 
               {decryptError && (
-                <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
+                <div className="p-3 bg-orange-500/10 border border-orange-500/30 rounded-lg text-orange-400 text-sm">
                   ❌ {decryptError}
                 </div>
               )}
@@ -598,7 +598,7 @@ export function DailymotionChannelsTab({
               <button
                 onClick={handleDecryptPreview}
                 disabled={isDecrypting || !importPassword || !importData}
-                className="w-full px-4 py-2 bg-[#E50914] hover:bg-[#B20710] disabled:bg-[#333] disabled:cursor-not-allowed text-white rounded-lg transition font-medium"
+                className="w-full px-4 py-2 bg-[#FF9900] hover:bg-[#FF8800] disabled:bg-[#333] disabled:cursor-not-allowed text-white rounded-lg transition font-medium"
               >
                 {isDecrypting ? "解密中..." : "🔓 解密预览"}
               </button>

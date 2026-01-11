@@ -144,7 +144,7 @@ function DailymotionContent() {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center p-8">
         <div className="text-center">
-          <AlertCircle className="w-16 h-16 text-red-500 mx-auto mb-4" />
+          <AlertCircle className="w-16 h-16 text-orange-500 mx-auto mb-4" />
           <h2 className="text-white text-2xl font-bold mb-2">
             {error || "Failed to load channel data"}
           </h2>
@@ -170,7 +170,7 @@ function DailymotionContent() {
       <div className="px-3 md:px-6 lg:px-10 py-3 border-b border-neutral-900">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-gray-400 hover:text-red-600 transition-colors text-sm group"
+          className="inline-flex items-center gap-2 text-gray-400 hover:text-orange-600 transition-colors text-sm group"
         >
           <Home
             size={18}

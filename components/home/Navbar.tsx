@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Menu, X, Home, Film, Tv, Clock, Video, Github } from "lucide-react";
+import { Menu, X, Home, Film, Tv, Clock, Video } from "lucide-react";
 
 interface NavbarProps {
   scrolled: boolean;
@@ -38,12 +38,6 @@ export function Navbar({ scrolled, onSearchOpen }: NavbarProps) {
         { href: "/shorts", label: "短剧" },
         { href: "/dailymotion", label: "短剧Motion" },
       ],
-    },
-    {
-      href: "https://github.com/unilei/kerkerker",
-      label: "Github",
-      icon: Github,
-      external: true,
     },
   ];
 
@@ -86,9 +80,9 @@ export function Navbar({ scrolled, onSearchOpen }: NavbarProps) {
                   router.push("/");
                   setIsMobileMenuOpen(false);
                 }}
-                className="text-red-600 text-xl md:text-2xl lg:text-3xl font-bold tracking-tight cursor-pointer hover:text-red-500 transition-colors"
+                className="text-orange-600 text-xl md:text-2xl lg:text-3xl font-bold tracking-tight cursor-pointer hover:text-orange-500 transition-colors"
               >
-                壳儿
+              {process.env.NEXT_PUBLIC_APP_NAME || "临客"}
               </h1>
             </div>
 
@@ -125,12 +119,12 @@ export function Navbar({ scrolled, onSearchOpen }: NavbarProps) {
                       <div className="absolute top-full left-0 pt-1">
                         <div className="py-2 bg-zinc-900 rounded-lg shadow-2xl border border-zinc-800 min-w-[140px] overflow-hidden">
                           {/* 顶部红色装饰线 - Netflix风格 */}
-                          <div className="absolute top-1 left-0 right-0 h-0.5 bg-red-600" />
+                          <div className="absolute top-1 left-0 right-0 h-0.5 bg-orange-600" />
                           {item.children.map((child) => (
                             <Link
                               key={child.href}
                               href={child.href}
-                              className="block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-red-600/20 transition-colors"
+                              className="block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-orange-600/20 transition-colors"
                             >
                               {child.label}
                             </Link>
@@ -203,8 +197,8 @@ export function Navbar({ scrolled, onSearchOpen }: NavbarProps) {
           <div className="p-6 border-b border-gray-800">
             <div className="flex items-center gap-2">
               <img className="w-10 h-10" src="/logo.png" alt="logo" />
-              <h2 className="text-red-600 text-2xl font-bold tracking-tight">
-                壳儿
+              <h2 className="text-orange-600 text-2xl font-bold tracking-tight">
+              {process.env.NEXT_PUBLIC_APP_NAME || "临客"}
               </h2>
             </div>
           </div>
@@ -245,7 +239,7 @@ export function Navbar({ scrolled, onSearchOpen }: NavbarProps) {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200 group"
                 >
-                  <Icon className="w-5 h-5 text-gray-400 group-hover:text-red-500 transition-colors" />
+                  <Icon className="w-5 h-5 text-gray-400 group-hover:text-orange-500 transition-colors" />
                   <span className="text-base font-medium">{item.label}</span>
                 </Link>
               );
@@ -255,7 +249,7 @@ export function Navbar({ scrolled, onSearchOpen }: NavbarProps) {
           {/* 侧边栏底部 */}
           <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-800">
             <p className="text-xs text-gray-500 text-center">
-              © 2026 壳儿 · 这就是个壳儿
+              © 2026 {process.env.NEXT_PUBLIC_APP_NAME || "临客"} ·
             </p>
           </div>
         </div>

@@ -168,7 +168,7 @@ export function DanmakuPanel({
                 onChange={(e) => setSearchKeyword(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="输入动漫名称搜索"
-                className="w-full px-4 sm:px-3 py-3 sm:py-2 pr-10 bg-white/10 border border-white/20 rounded-lg text-white text-base sm:text-sm placeholder:text-white/40 focus:outline-none focus:border-red-500/50"
+                className="w-full px-4 sm:px-3 py-3 sm:py-2 pr-10 bg-white/10 border border-white/20 rounded-lg text-white text-base sm:text-sm placeholder:text-white/40 focus:outline-none focus:border-orange-500/50"
               />
               {isSearching && (
                 <Loader2
@@ -180,7 +180,7 @@ export function DanmakuPanel({
             <button
               onClick={handleSearch}
               disabled={isSearching || !searchKeyword.trim()}
-              className="px-4 sm:px-3 py-3 sm:py-2 min-w-[48px] bg-red-500 hover:bg-red-600 active:bg-red-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg transition-colors"
+              className="px-4 sm:px-3 py-3 sm:py-2 min-w-[48px] bg-orange-500 hover:bg-orange-600 active:bg-orange-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg transition-colors"
             >
               <Search size={18} className="sm:w-4 sm:h-4 text-white" />
             </button>
@@ -191,7 +191,7 @@ export function DanmakuPanel({
         <div className="flex-1 overflow-y-auto p-3 space-y-3">
           {/* 错误提示 */}
           {error && (
-            <div className="flex items-center gap-2 p-3 bg-red-500/20 border border-red-500/30 rounded-lg text-red-300 text-sm">
+            <div className="flex items-center gap-2 p-3 bg-orange-500/20 border border-orange-500/30 rounded-lg text-orange-300 text-sm">
               <AlertCircle size={16} />
               <span>{error}</span>
             </div>
@@ -242,7 +242,7 @@ export function DanmakuPanel({
                   onClick={() => handleSelectAnime(anime)}
                   className={`w-full flex items-center gap-3 p-2 rounded-lg transition-colors ${
                     selectedAnime?.animeId === anime.animeId
-                      ? "bg-red-500/30 border border-red-500/50"
+                      ? "bg-orange-500/30 border border-orange-500/50"
                       : "bg-white/5 hover:bg-white/10"
                   }`}
                 >
@@ -285,7 +285,7 @@ export function DanmakuPanel({
                       onClick={() => setSelectedEpisode(episode)}
                       className={`px-2 py-1.5 text-xs rounded transition-colors ${
                         selectedEpisode?.episodeId === episode.episodeId
-                          ? "bg-red-500 text-white"
+                          ? "bg-orange-500 text-white"
                           : "bg-white/10 text-white/70 hover:bg-white/20"
                       }`}
                       title={episode.episodeTitle}
@@ -304,7 +304,7 @@ export function DanmakuPanel({
               <button
                 onClick={handleLoadDanmaku}
                 disabled={isLoadingDanmaku}
-                className="w-full flex items-center justify-center gap-2 py-2.5 bg-red-500 hover:bg-red-600 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg transition-colors"
+                className="w-full flex items-center justify-center gap-2 py-2.5 bg-orange-500 hover:bg-orange-600 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg transition-colors"
               >
                 {isLoadingDanmaku ? (
                   <Loader2 size={16} className="animate-spin" />

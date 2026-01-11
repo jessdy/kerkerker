@@ -158,9 +158,9 @@ export default function ShortsPage() {
     return (
       <div className="h-[100dvh] w-full bg-black flex items-center justify-center">
         <div className="text-center px-6">
-          <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg
-              className="w-8 h-8 text-red-400"
+              className="w-8 h-8 text-orange-400"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -176,7 +176,7 @@ export default function ShortsPage() {
           <p className="text-white text-lg mb-4">{error}</p>
           <button
             onClick={() => fetchDramas(1, currentSource)}
-            className="px-6 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
+            className="px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg transition-colors"
           >
             重试
           </button>

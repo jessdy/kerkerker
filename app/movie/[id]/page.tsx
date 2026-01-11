@@ -358,7 +358,7 @@ export default function MovieDetailPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white font-sans selection:bg-red-500/30">
+    <div className="min-h-screen bg-[#0a0a0a] text-white font-sans selection:bg-orange-500/30">
       {/* 沉浸式背景 - 调整透明度以保持整体暗黑风格一致性 */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-[#0a0a0a] z-0" />
@@ -385,7 +385,7 @@ export default function MovieDetailPage() {
               className="text-xl font-bold tracking-tight cursor-pointer hidden sm:block"
               onClick={goBack}
             >
-              <span className="text-red-600">壳儿</span>
+              <span className="text-orange-600">{process.env.NEXT_PUBLIC_APP_NAME || "临客"}</span>
               <span className="text-white ml-1">详情</span>
             </h1>
           </div>
@@ -418,9 +418,9 @@ export default function MovieDetailPage() {
 
               {/* 类型标签 */}
               <div className="flex gap-2">
-                <div className="h-7 w-16 bg-red-500/10 rounded-full animate-pulse" />
-                <div className="h-7 w-14 bg-red-500/10 rounded-full animate-pulse delay-75" />
-                <div className="h-7 w-18 bg-red-500/10 rounded-full animate-pulse delay-100" />
+                <div className="h-7 w-16 bg-orange-500/10 rounded-full animate-pulse" />
+                <div className="h-7 w-14 bg-orange-500/10 rounded-full animate-pulse delay-75" />
+                <div className="h-7 w-18 bg-orange-500/10 rounded-full animate-pulse delay-100" />
               </div>
 
               {/* 导演/演员 */}
@@ -448,7 +448,7 @@ export default function MovieDetailPage() {
                   <div className="h-6 w-20 bg-white/10 rounded animate-pulse" />
                   <div className="h-4 w-28 bg-white/5 rounded animate-pulse" />
                 </div>
-                <div className="h-12 w-36 bg-red-500/20 rounded-full mx-auto animate-pulse" />
+                <div className="h-12 w-36 bg-orange-500/20 rounded-full mx-auto animate-pulse" />
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
                   {[...Array(6)].map((_, i) => (
                     <div
@@ -526,7 +526,7 @@ export default function MovieDetailPage() {
                     {movieDetail.types.map((type, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-red-500/20 text-red-300 rounded-full text-sm border border-red-500/20"
+                        className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm border border-orange-500/20"
                       >
                         {type}
                       </span>
@@ -633,7 +633,7 @@ export default function MovieDetailPage() {
               <div className="bg-[#121212]/40 backdrop-blur-2xl rounded-3xl border border-white/5 p-6 md:p-8 shadow-2xl shadow-black/20">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-xl font-bold text-white flex items-center gap-3">
-                    <span className="w-1 h-6 bg-red-600 rounded-full" />
+                    <span className="w-1 h-6 bg-orange-600 rounded-full" />
                     播放源
                     {searchStatus === "searching" && totalSourceCount > 0 && (
                       <span className="text-sm font-normal text-gray-400 ml-2 flex items-center gap-2">
@@ -659,7 +659,7 @@ export default function MovieDetailPage() {
                 {searchStatus === "searching" &&
                   availableSources.length === 0 && (
                     <div className="flex flex-col items-center justify-center py-12 text-gray-400 gap-3">
-                      <Loader2 className="w-8 h-8 animate-spin text-red-500" />
+                      <Loader2 className="w-8 h-8 animate-spin text-orange-500" />
                       <span>正在全网搜索资源...</span>
                     </div>
                   )}
@@ -672,10 +672,10 @@ export default function MovieDetailPage() {
                     {/* 快速播放 */}
                     <button
                       onClick={handleQuickPlay}
-                      className="w-full md:w-auto flex items-center justify-center gap-3 bg-red-600 hover:bg-red-500 text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-[1.02] active:scale-[0.98] shadow-xl shadow-red-900/20 group"
+                      className="w-full md:w-auto flex items-center justify-center gap-3 bg-orange-600 hover:bg-orange-500 text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-[1.02] active:scale-[0.98] shadow-xl shadow-orange-900/20 group"
                     >
                       <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <Play className="w-4 h-4 fill-red-600 text-red-600 ml-0.5" />
+                        <Play className="w-4 h-4 fill-orange-600 text-orange-600 ml-0.5" />
                       </div>
                       立即播放
                     </button>
@@ -689,7 +689,7 @@ export default function MovieDetailPage() {
                             onClick={() => handlePlay(source)}
                             className={`relative p-4 rounded-xl text-left transition-all duration-300 group border ${
                               index === 0
-                                ? "bg-red-500/10 border-red-500/30 hover:bg-red-500/20 hover:border-red-500/50"
+                                ? "bg-orange-500/10 border-orange-500/30 hover:bg-orange-500/20 hover:border-orange-500/50"
                                 : "bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/10"
                             }`}
                           >
@@ -697,7 +697,7 @@ export default function MovieDetailPage() {
                               <span
                                 className={`text-xs font-medium px-2 py-0.5 rounded-md ${
                                   index === 0
-                                    ? "bg-red-500/20 text-red-300"
+                                    ? "bg-orange-500/20 text-orange-300"
                                     : "bg-white/10 text-gray-400 group-hover:text-white"
                                 }`}
                               >
@@ -709,7 +709,7 @@ export default function MovieDetailPage() {
                                 </span>
                               )}
                             </div>
-                            <div className="font-medium text-white text-sm line-clamp-1 group-hover:text-red-400 transition-colors">
+                            <div className="font-medium text-white text-sm line-clamp-1 group-hover:text-orange-400 transition-colors">
                               {source.vod_name}
                             </div>
                           </button>
@@ -744,8 +744,8 @@ export default function MovieDetailPage() {
                 {/* 错误状态 - 提示配置视频源 */}
                 {searchStatus === "error" && (
                   <div className="flex flex-col items-center justify-center py-12 gap-4">
-                    <div className="w-16 h-16 bg-[#E50914]/10 rounded-full flex items-center justify-center">
-                      <AlertCircle className="w-8 h-8 text-[#E50914]" />
+                    <div className="w-16 h-16 bg-[#FF9900]/10 rounded-full flex items-center justify-center">
+                      <AlertCircle className="w-8 h-8 text-[#FF9900]" />
                     </div>
                     <div className="text-center">
                       <p className="text-white font-medium mb-2">
@@ -757,7 +757,7 @@ export default function MovieDetailPage() {
                     </div>
                     <a
                       href="/admin/settings"
-                      className="mt-2 px-6 py-2.5 bg-[#E50914] hover:bg-[#B20710] rounded-full text-sm text-white font-medium transition-colors shadow-lg shadow-[#E50914]/20 flex items-center gap-2"
+                      className="mt-2 px-6 py-2.5 bg-[#FF9900] hover:bg-[#FF8800] rounded-full text-sm text-white font-medium transition-colors shadow-lg shadow-[#FF9900]/20 flex items-center gap-2"
                     >
                       <svg
                         className="w-4 h-4"
@@ -791,7 +791,7 @@ export default function MovieDetailPage() {
             movieDetail.recommendations.length > 0 && (
               <div className="mt-12">
                 <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Film className="w-6 h-6 text-red-500" />
+                  <Film className="w-6 h-6 text-orange-500" />
                   相关推荐
                 </h2>
                 <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
@@ -801,14 +801,14 @@ export default function MovieDetailPage() {
                       href={`/movie/${rec.id}`}
                       className="group"
                     >
-                      <div className="aspect-2/3 rounded-xl overflow-hidden bg-white/5 mb-2 border border-white/5 group-hover:border-red-500/50 transition-colors">
+                      <div className="aspect-2/3 rounded-xl overflow-hidden bg-white/5 mb-2 border border-white/5 group-hover:border-orange-500/50 transition-colors">
                         <img
                           src={getImageUrl(rec.cover)}
                           alt={rec.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
-                      <h3 className="text-sm text-white font-medium line-clamp-1 group-hover:text-red-400 transition-colors">
+                      <h3 className="text-sm text-white font-medium line-clamp-1 group-hover:text-orange-400 transition-colors">
                         {rec.title}
                       </h3>
                       {rec.rate && (

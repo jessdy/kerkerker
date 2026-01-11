@@ -361,9 +361,9 @@ export default function PlayPage() {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center px-6">
-          <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg
-              className="w-10 h-10 text-red-400"
+              className="w-10 h-10 text-orange-400"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -379,7 +379,7 @@ export default function PlayPage() {
           <p className="text-white text-xl mb-2">{error}</p>
           <button
             onClick={() => router.push("/")}
-            className="mt-4 px-6 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
+            className="mt-4 px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg transition-colors"
           >
             返回首页
           </button>
@@ -407,9 +407,9 @@ export default function PlayPage() {
         <div className="w-full mx-auto px-4 md:px-6 h-[48px] md:h-[64px] flex items-center justify-between">
           <button
             onClick={() => router.back()}
-            className="text-white text-lg font-bold flex items-center gap-2 hover:text-red-500 transition-all duration-300 group"
+            className="text-white text-lg font-bold flex items-center gap-2 hover:text-orange-500 transition-all duration-300 group"
           >
-            <div className="p-2 rounded-lg bg-white/5 group-hover:bg-red-500/10 transition-all duration-300">
+            <div className="p-2 rounded-lg bg-white/5 group-hover:bg-orange-500/10 transition-all duration-300">
               <ArrowLeft className="w-5 h-5" />
             </div>
             <span className="hidden sm:inline">返回</span>
@@ -447,10 +447,10 @@ export default function PlayPage() {
             {!isRightPanelOpen && (
               <button
                 onClick={() => setIsRightPanelOpen(true)}
-                className="p-2 rounded-lg bg-white/5 hover:bg-red-500/10 transition-all duration-300 group"
+                className="p-2 rounded-lg bg-white/5 hover:bg-orange-500/10 transition-all duration-300 group"
                 title="打开侧边栏"
               >
-                <ChevronLeft className="w-5 h-5 text-white group-hover:text-red-500 transform rotate-180" />
+                <ChevronLeft className="w-5 h-5 text-white group-hover:text-orange-500 transform rotate-180" />
               </button>
             )}
           </div>
@@ -503,7 +503,7 @@ export default function PlayPage() {
             </h1>
             <div className="flex flex-wrap items-center gap-2 text-xs">
               {dramaDetail.year && (
-                <span className="px-2 py-1 bg-linear-to-r from-red-600 to-red-500 text-white font-semibold rounded-md shadow-lg shadow-red-500/30">
+                <span className="px-2 py-1 bg-linear-to-r from-orange-600 to-orange-500 text-white font-semibold rounded-md shadow-lg shadow-orange-500/30">
                   {dramaDetail.year}
                 </span>
               )}
@@ -583,7 +583,7 @@ export default function PlayPage() {
                         }}
                         className={`aspect-video rounded-lg text-xs lg:text-sm flex flex-col items-center justify-center p-2 transition-all duration-300 group relative overflow-hidden ${
                           currentEpisode === index
-                            ? "bg-linear-to-br from-red-600 to-red-500 text-white shadow-lg shadow-red-500/40 ring-2 ring-red-400 scale-105"
+                            ? "bg-linear-to-br from-orange-600 to-orange-500 text-white shadow-lg shadow-orange-500/40 ring-2 ring-orange-400 scale-105"
                             : "bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white hover:scale-105 backdrop-blur-sm"
                         }`}
                       >
@@ -601,7 +601,7 @@ export default function PlayPage() {
                     </h1>
                     <div className="flex flex-wrap items-center gap-2 text-sm mb-4">
                       {dramaDetail.year && (
-                        <span className="px-3 py-1.5 bg-linear-to-r from-red-600 to-red-500 text-white font-semibold rounded-md shadow-lg shadow-red-500/30">
+                        <span className="px-3 py-1.5 bg-linear-to-r from-orange-600 to-orange-500 text-white font-semibold rounded-md shadow-lg shadow-orange-500/30">
                           {dramaDetail.year}
                         </span>
                       )}
@@ -670,7 +670,7 @@ export default function PlayPage() {
                             onClick={() =>
                               setIsDescriptionExpanded(!isDescriptionExpanded)
                             }
-                            className="mt-2 text-xs lg:text-sm text-red-500 hover:text-red-400 font-semibold transition-colors flex items-center gap-1 group"
+                            className="mt-2 text-xs lg:text-sm text-orange-500 hover:text-orange-400 font-semibold transition-colors flex items-center gap-1 group"
                           >
                             {isDescriptionExpanded ? (
                               <>
@@ -735,7 +735,7 @@ export default function PlayPage() {
                         disabled={
                           currentEpisode === dramaDetail.episodes.length - 1
                         }
-                        className="flex-1 px-4 py-2.5 bg-linear-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 disabled:from-gray-800 disabled:to-gray-800 disabled:text-gray-600 text-white rounded-lg transition-all duration-300 text-xs lg:text-sm font-semibold shadow-lg shadow-red-500/30 hover:shadow-red-500/50 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] disabled:hover:scale-100 disabled:shadow-none"
+                        className="flex-1 px-4 py-2.5 bg-linear-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-400 disabled:from-gray-800 disabled:to-gray-800 disabled:text-gray-600 text-white rounded-lg transition-all duration-300 text-xs lg:text-sm font-semibold shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] disabled:hover:scale-100 disabled:shadow-none"
                       >
                         下一集
                       </button>
@@ -751,7 +751,7 @@ export default function PlayPage() {
                             onClick={() => selectEpisode(index)}
                             className={`rounded-lg flex flex-col text-xs lg:text-sm items-center justify-center p-2 transition-all duration-300 group relative overflow-hidden ${
                               currentEpisode === index
-                                ? "bg-linear-to-br from-red-600 to-red-500 text-white shadow-lg shadow-red-500/40 ring-2 ring-red-400 scale-105"
+                                ? "bg-linear-to-br from-orange-600 to-orange-500 text-white shadow-lg shadow-orange-500/40 ring-2 ring-orange-400 scale-105"
                                 : "bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white hover:scale-105 backdrop-blur-sm"
                             }`}
                           >

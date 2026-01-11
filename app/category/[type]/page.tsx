@@ -36,9 +36,9 @@ const CATEGORY_CONFIG: Record<
     name: "豆瓣热映",
     emoji: "🔥",
     icon: <Flame className="w-5 h-5 text-orange-500" />,
-    gradient: "from-orange-500/5 via-transparent to-red-500/5",
+    gradient: "from-orange-500/5 via-transparent to-orange-500/5",
     bgColor1: "bg-orange-500/10",
-    bgColor2: "bg-red-500/10",
+    bgColor2: "bg-orange-500/10",
   },
   top250: {
     name: "豆瓣 Top 250",
@@ -51,9 +51,9 @@ const CATEGORY_CONFIG: Record<
   hot_movies: {
     name: "热门电影",
     emoji: "🎬",
-    icon: <Film className="w-5 h-5 text-red-500" />,
-    gradient: "from-red-500/5 via-transparent to-pink-500/5",
-    bgColor1: "bg-red-500/10",
+    icon: <Film className="w-5 h-5 text-orange-500" />,
+    gradient: "from-orange-500/5 via-transparent to-pink-500/5",
+    bgColor1: "bg-orange-500/10",
     bgColor2: "bg-pink-500/10",
   },
   hot_tv: {
@@ -99,9 +99,9 @@ const CATEGORY_CONFIG: Record<
   chinese_tv: {
     name: "国产剧",
     emoji: "🇨🇳",
-    icon: <Drama className="w-5 h-5 text-red-500" />,
-    gradient: "from-red-500/5 via-transparent to-orange-500/5",
-    bgColor1: "bg-red-500/10",
+    icon: <Drama className="w-5 h-5 text-orange-500" />,
+    gradient: "from-orange-500/5 via-transparent to-orange-500/5",
+    bgColor1: "bg-orange-500/10",
     bgColor2: "bg-orange-500/10",
   },
   variety: {
@@ -180,8 +180,8 @@ export default function CategoryPage() {
               </div>
               <span className="text-sm md:text-base font-medium">返回</span>
             </button>
-            <h1 className="text-2xl md:text-3xl font-bold tracking-tight bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
-              壳儿
+            <h1 className="text-2xl md:text-3xl font-bold tracking-tight bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
+            {process.env.NEXT_PUBLIC_APP_NAME || "临客"}
             </h1>
           </div>
         </div>
@@ -215,17 +215,17 @@ export default function CategoryPage() {
         {loading ? (
           <div className="flex items-center justify-center py-32">
             <div className="text-center">
-              <div className="animate-spin rounded-full h-16 w-16 border-4 border-gray-700 border-t-red-600 mx-auto mb-4" />
+              <div className="animate-spin rounded-full h-16 w-16 border-4 border-gray-700 border-t-orange-600 mx-auto mb-4" />
               <p className="text-gray-400 text-lg">正在加载精彩内容...</p>
             </div>
           </div>
         ) : error ? (
           <div className="flex items-center justify-center py-32">
             <div className="text-center">
-              <p className="text-red-500 mb-4">{error}</p>
+              <p className="text-orange-500 mb-4">{error}</p>
               <button
                 onClick={refetch}
-                className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors shadow-lg shadow-red-600/20"
+                className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium transition-colors shadow-lg shadow-orange-600/20"
               >
                 重新加载
               </button>
@@ -241,7 +241,7 @@ export default function CategoryPage() {
               <p className="text-gray-400 mb-6">该分类暂无影片数据</p>
               <button
                 onClick={goBack}
-                className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors"
+                className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium transition-colors"
               >
                 返回首页
               </button>

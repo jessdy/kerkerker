@@ -82,7 +82,7 @@
 
 ```bash
 # 1. 克隆项目
-git clone https://github.com/unilei/kerkerker.git
+git clone https://github.com/jessdy/kerkerker.git
 cd kerkerker
 
 # 2. 创建配置文件

@@ -22,7 +22,7 @@ export function Pagination({ currentPage, hasMore, onPageChange }: PaginationPro
         <span>上一页</span>
       </button>
 
-      <div className="px-5 py-2 bg-red-600 text-white rounded-lg font-medium">
+      <div className="px-5 py-2 bg-orange-600 text-white rounded-lg font-medium">
         第 {currentPage} 页
       </div>
 

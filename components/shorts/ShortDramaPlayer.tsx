@@ -72,7 +72,7 @@ export function ShortDramaPlayer({
           mutex: true,
           backdrop: true,
           playsInline: true,
-          theme: "#e50914", // Netflix红色
+          theme: "#ff9900", // Pornhub橙色
           lang: "zh-cn",
           lock: false,
           fastForward: true,
@@ -236,7 +236,7 @@ export function ShortDramaPlayer({
       {error && (
         <div className="absolute inset-0 flex items-center justify-center bg-black/80 z-30">
           <div className="text-center">
-            <div className="text-red-500 text-lg mb-2">{error}</div>
+            <div className="text-orange-500 text-lg mb-2">{error}</div>
             <button
               onClick={(e) => {
                 e.stopPropagation();

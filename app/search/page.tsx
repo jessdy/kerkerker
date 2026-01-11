@@ -214,7 +214,7 @@ function SearchContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-red-500/30">
+    <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-orange-500/30">
       {/* 顶部导航栏 */}
       <div className="sticky top-0 left-0 right-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-black/50">
         <div className="max-w-[2000px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -243,7 +243,7 @@ function SearchContent() {
                 className="text-xl font-bold tracking-tight cursor-pointer hidden sm:block"
                 onClick={goBack}
               >
-                <span className="text-red-600">壳儿</span>
+                <span className="text-orange-600">{process.env.NEXT_PUBLIC_APP_NAME || "临客"}</span>
                 <span className="text-white ml-1">搜索</span>
               </h1>
             </div>
@@ -252,7 +252,7 @@ function SearchContent() {
               <div className="relative group">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                   <svg
-                    className="w-5 h-5 text-gray-500 group-focus-within:text-red-500 transition-colors"
+                    className="w-5 h-5 text-gray-500 group-focus-within:text-orange-500 transition-colors"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -271,7 +271,7 @@ function SearchContent() {
                   onChange={(e) => setSearchKeyword(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && handleSearch()}
                   placeholder="搜索电影、电视剧、动漫..."
-                  className="w-full bg-white/5 border border-white/10 rounded-full py-2.5 pl-12 pr-12 text-sm md:text-base text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500/50 focus:bg-white/10 transition-all"
+                  className="w-full bg-white/5 border border-white/10 rounded-full py-2.5 pl-12 pr-12 text-sm md:text-base text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50 focus:bg-white/10 transition-all"
                   autoFocus
                 />
                 {searchKeyword && (
@@ -296,7 +296,7 @@ function SearchContent() {
                 )}
                 <button
                   onClick={handleSearch}
-                  className="absolute inset-y-0 right-1.5 my-1.5 px-4 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-full transition-colors shadow-lg shadow-red-900/20"
+                  className="absolute inset-y-0 right-1.5 my-1.5 px-4 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-full transition-colors shadow-lg shadow-orange-900/20"
                 >
                   搜索
                 </button>
@@ -333,7 +333,7 @@ function SearchContent() {
                       onClick={() => setCurrentSource(source)}
                       className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all flex items-center gap-1.5 ${
                         currentSource?.key === source.key
-                          ? "bg-red-600 text-white shadow-lg shadow-red-900/20"
+                          ? "bg-orange-600 text-white shadow-lg shadow-orange-900/20"
                           : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-transparent hover:border-white/10"
                       }`}
                     >
@@ -366,7 +366,7 @@ function SearchContent() {
             <div className="flex items-center gap-2 text-gray-400">
               {loading ? (
                 <>
-                  <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
+                  <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
                   正在从 {searchProgress.total} 个源中搜索...
                   <span className="ml-2 px-2 py-0.5 bg-white/5 rounded-md text-xs">
                     已完成 {searchProgress.completed}/{searchProgress.total}
@@ -396,9 +396,9 @@ function SearchContent() {
         {allSources.length === 0 ? (
           // 无视频源配置
           <div className="flex flex-col items-center justify-center py-32 animate-fade-in">
-            <div className="w-20 h-20 bg-red-500/10 rounded-full flex items-center justify-center mb-6 border border-red-500/20">
+            <div className="w-20 h-20 bg-orange-500/10 rounded-full flex items-center justify-center mb-6 border border-orange-500/20">
               <svg
-                className="w-10 h-10 text-red-500"
+                className="w-10 h-10 text-orange-500"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -504,7 +504,7 @@ function SearchContent() {
                 </button>
                 <button
                   onClick={() => setSearchKeyword("")}
-                  className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
+                  className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg transition-colors"
                 >
                   重新搜索
                 </button>
@@ -549,7 +549,7 @@ export default function SearchPage() {
       fallback={
         <div className="min-h-screen bg-black text-white flex items-center justify-center">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-16 w-16 border-4 border-gray-700 border-t-red-600 mx-auto mb-4" />
+            <div className="animate-spin rounded-full h-16 w-16 border-4 border-gray-700 border-t-orange-600 mx-auto mb-4" />
             <p className="text-gray-300 text-lg font-medium">加载中...</p>
           </div>
         </div>

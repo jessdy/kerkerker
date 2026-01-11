@@ -109,7 +109,7 @@ export function SourceSelector({ sources, currentSourceKey, onSourceChange }: So
           <div className="p-3 border-b border-gray-800 bg-gradient-to-r from-gray-800/50 to-transparent">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-semibold text-white flex items-center space-x-2">
-                <svg className="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-4 h-4 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                 </svg>
                 <span>选择播放源</span>
@@ -134,7 +134,7 @@ export function SourceSelector({ sources, currentSourceKey, onSourceChange }: So
                     setIsOpen(false);
                   }}
                   className={`w-full text-left px-4 py-3 transition-all ${isCurrent
-                    ? 'bg-red-600/20 border-l-4 border-red-600'
+                    ? 'bg-orange-600/20 border-l-4 border-orange-600'
                     : 'hover:bg-white/5 border-l-4 border-transparent'
                     } ${index !== sortedSources.length - 1 ? 'border-b border-gray-800/50' : ''}`}
                   disabled={isCurrent}
@@ -143,12 +143,12 @@ export function SourceSelector({ sources, currentSourceKey, onSourceChange }: So
                     <div className="flex-1 min-w-0">
                       {/* 源名称 */}
                       <div className="flex items-center space-x-2 mb-1">
-                        <p className={`text-sm font-semibold truncate ${isCurrent ? 'text-red-400' : 'text-white'
+                        <p className={`text-sm font-semibold truncate ${isCurrent ? 'text-orange-400' : 'text-white'
                           }`}>
                           {source.source_name}
                         </p>
                         {isCurrent && (
-                          <span className="flex-shrink-0 text-red-400">
+                          <span className="flex-shrink-0 text-orange-400">
                             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                             </svg>
