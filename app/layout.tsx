@@ -43,10 +43,10 @@ export default function RootLayout({
         <meta name="x5-fullscreen" content="true" />
         <meta name="x5-page-mode" content="app" />
         <meta name="browsermode" content="application" />
-
+        
         {/* Google Analytics */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-FXGFKZZHR7"
+          src="https://www.googletagmanager.com/gtag/js?id=G-M3DW94JS41"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -54,7 +54,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-FXGFKZZHR7');
+            gtag('config', 'G-M3DW94JS41');
           `}
         </Script>
       </head>
